@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="CSS/1140.css" rel="stylesheet" />
+    <link href="CSS/Rana/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" />
+
+    <script src="js/jquery-1.8.2.js"></script>
+    <script src="js/jquery-ui-1.9.1.custom.min.js"></script>
+    <script src="js/FuncionesPropias.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="fourcol">
+
+                <input id="Button1" type="button" value="Deshabilita" onclick="deshabilita(1);" />
+                <input id="Button2" type="button" value="Añade Tab" onclick="crear();" />
+                <input id="Button3" type="button" value="Borra Tab" onclick="borrar();" />
+            </div>
+
+            <div class="threecol">
+                <div id="EjemploTabs">
+
+
+                    <ul>
+                        <li><a href="#fragmento1"><span>Uno</span></a></li>
+                        <li><a href="#fragmento2"><span>Dos</span></a></li>
+                        <li><a href="#fragmento3"><span>Tres</span></a></li>
+                    </ul>
+
+                    <div id="fragmento1">Este es el tab 1</div>
+                    <div id="fragmento2">Este es el tab 2</div>
+                    <div id="fragmento3">Este es el tab 3</div>
+                </div>
+            </div>
+
+            <div class="fivecol last">
+
+                <div id="acordeon">
+
+                    <h2>
+
+                        <a href="#">Cabecera 1</a>
+
+                    </h2>
+
+                    <div>Texto primer parrafo</div>
+                    <h2>
+
+                        <a href="#">Cabecera 2</a>
+
+                    </h2>
+                    <div>Texto segundo parrafo</div>
+                    <h2>
+
+                        <a href="#">Cabecera 3</a>
+
+                    </h2>
+
+                    <div>Texto tercer parrafo</div>
+                    <h2>
+
+                        <a href="#">Cabecera 4</a>
+
+                    </h2>
+
+                    <div>Texto cuarto parrafo</div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="fourcol">
+
+                <input id="Button4" type="button" value="Muestra dialogo" onclick="muestraDialogo();"/>
+
+                <div id="miDialogo" title="Esto es el titulo">
+
+                    Aqui va el cuerpo del mensaje 
+
+
+                </div>
+               
+            </div>
+
+            <div class="threecol">
+
+                <br />
+                <div id="rojo">
+                </div>
+                <br />
+                <br />
+                <div id="verde">
+                </div>
+                <br />
+                <br />
+                <div id="azul">
+                </div>
+                <p>Valor del Slider :<span id="deslizador"> </span></p>
+
+               <div id="cambiaColor">
+
+                   <br />
+               Miguel es una maquina
+                   <br />
+               Miguel es una maquina
+
+               </div>
+
+            </div>
+
+            <div class="fivecol last">
+
+                <label for="fecha">Introduce la fecha</label>
+                <input id="fecha" type="text" />
+
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="fourcol">    
+                
+                <label for="Autocompleta">Seleccione un lenguaje de programacion</label>
+                <input id="Autocompleta" />  
+
+                <br />
+
+                <label for="Autocompleta2">Seleccione un lenguaje de programacion</label>
+                <input id="Autocompleta20" />
+                
+                <br />
+                <br />
+
+                <input id="Button5" type="button" value="Boton de prueba" />
+      
+            </div>
+
+           
+
+            <div class="threecol">
+
+                <div id="progreso">
+
+
+
+                </div>
+
+
+
+            </div>
+
+            <div class="fivecol last">
+
+
+                 <div id="radio">
+
+
+                    <input id="Radio1" type="radio" name="radio"/> <label for="Radio1">Opcion 1</label>
+                    <input id="Radio2" type="radio" name="radio" checked="checked" /><label for="Radio2">Opcion 2</label>
+                    <input id="Radio3" type="radio" name="radio"/><label for="Radio3">Opcion 3</label>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link href="CSS/1140.css" rel="stylesheet" />
+    <link href="CSS/Rana/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" />
+
+
+    <script src="js/jquery-1.8.2.js"></script>
+    <script src="js/jquery-ui-1.9.1.custom.min.js"></script>
+    <script src="js/FuncionesPropias.js"></script>
+
+    <title></title>
+</head>
+<body>
+    <!-- En esta pagina utilizamos el grid 1140 para resoluciones altas, esta solo una fila.
+        Tenemos diferentes efectos de JQuery.
+        -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="fourcol">
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#fragment-1"><span>One</span></a></li>
+                        <li><a href="#fragment-2"><span>Two</span></a></li>
+                        <li><a href="#fragment-3"><span>Three</span></a></li>
+                    </ul>
+                    <div id="fragment-1">
+                        <p>First tab is active by default:</p>
+                        <pre><code>$( "#tabs" ).tabs(); </code></pre>
+                    </div>
+                    <div id="fragment-2">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </div>
+                    <div id="fragment-3">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </div>
+                </div>
+
+                <script>
+
+
+
+                    /*A este se le llama siempre que se inicia la pagina*/
+
+                    (function ($) {
+
+                        var opcionesTab = {
+                            selected: 2
+                        };
+                        $("#tabs").tabs(opcionesTab);
+
+                        $("#tabs").bind("tabsselect", function (e, tab) {
+
+                            alert("Has pulsado el tab numero:" + (tab.index + 1));
+
+                        });
+
+
+
+                    })(jQuery);
+
+                    //A este le llamamos desde el boton 1
+                    function cambiaTab1() {
+
+                        var opcionesTab = {
+                            disabled: [0]
+                        };
+                        $("#tabs").tabs(opcionesTab);
+                    }
+                    //A este le llamamos desde el boton 2
+                    function cambiaTab2() {
+
+                        var opcionesTab = {
+                            fx: {
+                                opacity: "toggle",
+                                duration: "slow"
+                            }
+                        };
+                        $("#tabs").tabs(opcionesTab);
+                    }
+                    //A este le llamamos desde el boton 3
+                    function cambiaTab3() {
+
+                        var opcionesTab = {
+                            selected: [2]
+                        };
+                        $("#tabs").tabs(opcionesTab);
+                    }
+                    //A este le llamamos desde el boton 4
+                    function cambiaTab4() {
+
+
+                        $("#tabs").tabs("remove", parseInt(2));
+                    }
+                    //A este le llamamos desde el boton 5
+                    function cambiaTab5() {
+
+
+                        $("#tabs").tabs("add", "", "Tabs nuevo");
+                    }
+                    //A este le llamamos desde el boton 6
+                    function cambiaTab6() {
+
+
+                        $("#tabs").tabs("rotate", 500, true);
+                    }
+
+                </script>
+
+            </div>
+        
+
+
+        <div class="fivecol">
+
+            <input id="boton1" type="button" value="Deshabilita 1" onclick="cambiaTab1();" />
+            <input id="boton2" type="button" value="Ralentiza menús" onclick="cambiaTab2();" />
+            <input id="boton3" type="button" value="Selecciona numero 3" onclick="cambiaTab3();" />
+            <input id="boton4" type="button" value="Elimina el ultimo tab" onclick="cambiaTab4();" />
+            <input id="boton5" type="button" value="Crea un Tab" onclick="cambiaTab5();" />
+            <input id="boton6" type="button" value="Crea un carrusel" onclick="cambiaTab6();" />
+        </div>
+
+        <div class="threecol last">
+        </div>
+
+</div>
+    </div>
+
+
+</body>
+</html>
